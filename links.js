@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // قم بتعيين روابط الفيديو هنا
     hdVideo.src = 'https://streamtv2.elitecomunicacion.cloud:3956/live/arabitvlive.m3u8';
-    sdVideo.src = 'رابط الفيديو جودة قياسية';
+    sdVideo.src = 'https://cdn.smartstream.video/smartstream-us/dy365/dy365/playlist.m3u8';
     lowVideo.src = 'رابط الفيديو منخفض الجودة';
 
     // إعادة تشغيل الفيديو عند تغيير الرابط
