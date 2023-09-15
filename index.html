@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
+	<script src="links.js"></script>
 <meta charset="UTF-8">
 <title>Video Playlist MOD Xavier Suarez</title>
 <!-- Responsive viewport -->
@@ -43,42 +44,28 @@ color:#fff;font-size:17px;}
 </head>
 <body>
 <div class="container">
-<div class="main-video">
-<div class="video">
-<video class='js-player' poster="" controls autoplay>
-<source src= " *___zaid__* ">
-</video>
+    <div class="main-video">
+        <div class="video">
+            <video id="hdVideo" poster="" controls autoplay>
+                <source src=""></source>
+            </video>
+            <h3 class="title">LOW الكرة الإنكليزية</h3>
+        </div>
+    </div>
 
-<h3 class="title">LOW الكرة الإنكليزية</h3></div></div>
+    <div class="video-list">
+        <div class="vid active">
+            <video id="sdVideo" poster=""></video>
+            <h3 class="title">LOW الكرة الإنكليزية</h3>
+        </div>
 
-<div class="video-list">
-<div class="vid active">
-    <video poster=""></video>
-    <h3 class="title">LOW الكرة الإنكليزية</h3>
+        <div class="vid">
+            <video id="lowVideo" poster=""></video>
+            <h3 class="title">HD الكرة الإنكليزية</h3>
+        </div>
+    </div>
 </div>
 
-<div class="vid">
-    <video poster=""></video>
-    <h3 class="title">SD الكرة الإنكليزية</h3>
-</div>
-
-<div class="vid">
-    <video poster=""></video>
-    <h3 class="title">HD الكرة الإنكليزية</h3>
-</div>
-
-<!-- أضف هنا العناصر الإضافية -->
-<div class="vid">
-    <video poster=""></video>
-    <h3 class="title">عنوان الفيديو الإضافي 1</h3>
-</div>
-
-<div class="vid">
-    <video poster=""></video>
-    <h3 class="title">عنوان الفيديو الإضافي 2</h3>
-</div>
-
-</div></div>
 <!-- partial -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
 <script type="text/javascript">
@@ -97,9 +84,13 @@ color:#fff;font-size:17px;}
       title.innerHTML = text;
     };
   };
-});
+});ue
 </script>
 <script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
+<script>//<![CDATA[
+const players = Array.from(document.querySelectorAll('.js-player')).map(player => new Plyr(player));
+//]]></script>
+ 
 <script>
   let vids = document.getElementsByClassName("vid");
   vids[0].firstElementChild.setAttribute("src",low);
