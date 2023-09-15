@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <title>Video Playlist</title>
-    <style type="text/css">
+<meta charset="UTF-8">
+<title>Video Playlist MOD Xavier Suarez</title>
+<!-- Responsive viewport -->
+<meta content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' name='viewport'/>
+<link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css"/>
+<style type="text/css">
 *{margin:0;padding:0;box-sizing:border-box;text-transform:capitalize;}
 body{background:#000;}
 .heading{color:#444;font-size:40px;text-align:center;padding:10px;}
@@ -40,38 +43,60 @@ color:#fff;font-size:17px;}
 </head>
 <body>
 <div class="container">
-    <div class="main-video">
-        <div class="video">
-            <video id="hdVideo" poster="" controls autoplay>
-                <source src=""></source>
-            </video>
-            <h3 class="title">LOW الكرة الإنكليزية</h3>
-        </div>
-    </div>
+<div class="main-video">
+<div class="video">
+<video class='js-player' poster="" controls autoplay>
+<source src= " *___zaid__* ">
+</video>
 
-    <div class="video-list">
-        <div class="vid active">
-            <video id="sdVideo" poster="">
-                <source src=""></source>
-            </video>
-            <h3 class="title">LOW الكرة الإنكليزية</h3>
-        </div>
+<h3 class="title">LOW الكرة الإنكليزية</h3></div></div>
 
-        <div class="vid">
-            <video id="lowVideo" poster="">
-                <source src=""></source>
-            </video>
-            <h3 class="title">HD الكرة الإنكليزية</h3>
-        </div>
-    </div>
-</div>
+<div class="video-list">
+<div class="vid active">
+<video poster=""></video>
+<h3 class="title">LOW الكرة الإنكليزية</h3></div>
 
+<div class="vid">
+<video></video>
+<h3 class="title">SD الكرة الإنكليزية</h3></div>
+
+<div class="vid">
+<video></video>
+<h3 class="title">HD الكرة الإنكليزية</h3></div>
+
+
+
+</div></div>
+<!-- partial -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
-<script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
-<script>
-    const players = Array.from(document.querySelectorAll('.js-player')).map(player => new Plyr(player));
+<script type="text/javascript">
+  let listVideo = document.querySelectorAll('.video-list .vid');
+  let mainVideo = document.querySelector('.main-video video');
+  let title = document.querySelector('.main-video .title');
+  
+  listVideo.forEach(video =>{
+    video.onclick = () =>{
+      listVideo.forEach(vid => vid.classList.remove('active'));
+      video.classList.add('active');
+      if(video.classList.contains('active')){
+        let src = video.children[0].getAttribute('src');
+        mainVideo.src = src;
+        let text = video.children[1].innerHTML;
+      title.innerHTML = text;
+    };
+  };
+});ue
 </script>
-<script src="links.js"></script>
-
-</body>
+<script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
+<script>//<![CDATA[
+const players = Array.from(document.querySelectorAll('.js-player')).map(player => new Plyr(player));
+//]]></script>
+  <script src="links.js"></script>
+<script>
+  let vids = document.getElementsByClassName("vid");
+  vids[0].firstElementChild.setAttribute("src",low);
+  vids[1].firstElementChild.setAttribute("src",sd);
+  vids[2].firstElementChild.setAttribute("src",hd);
+</script>
+</body> 
 </html>
