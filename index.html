@@ -56,14 +56,14 @@ color:#fff;font-size:17px;}
 
 <div class="video-list">
 <div class="vid active">
-<video class='js-player' poster="" controls autoplay>
+<video class='js-player'>
   <source src= "low">
 </video>
 
 <h3 class="title">LOW الكرة الإنكليزية</h3></div>
 
 <div class="vid">
-<video></video>
+<video><source src= "sd"></video>
 <h3 class="title">SD الكرة الإنكليزية</h3></div>
 
 <div class="vid">
@@ -105,4 +105,4 @@ const players = Array.from(document.querySelectorAll('.js-player')).map(player =
   vids[2].firstElementChild.setAttribute("src",hd);
 </script>
 </body> 
-	</html>
+</html>
