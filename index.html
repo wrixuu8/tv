@@ -11,24 +11,17 @@
         // احصل على العنصر الذي يعرض العدد
         const counterElement = document.getElementById("counter");
 
-        // احصل على قيمة العدد من ملف الارتباط إذا كان متوفرًا
-        let count = parseInt(getCookie("visitorCount")) || 0;
+        // احصل على العدد من مخزن الويب إذا كان متوفرًا
+        let count = parseInt(localStorage.getItem("visitorCount")) || 0;
 
         // عرض العدد الحالي
         counterElement.textContent = count;
 
-        // زيادة العدد وتحديث ملف الارتباط
+        // زيادة العدد وتحديث مخزن الويب
         function increaseCount() {
             count++;
             counterElement.textContent = count;
-            document.cookie = "visitorCount=" + count;
-        }
-
-        // دالة للحصول على قيمة ملف الارتباط بواسطة اسمه
-        function getCookie(name) {
-            const value = `; ${document.cookie}`;
-            const parts = value.split(`; ${name}=`);
-            if (parts.length === 2) return parts.pop().split(";").shift();
+            localStorage.setItem("visitorCount", count);
         }
 
         // استدعاء الوظيفة عند تحميل الصفحة
